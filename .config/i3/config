@@ -100,7 +100,7 @@ bindsym Mod4+Shift+$right move right
 
 # alternatively, you can use the cursor keys:
 bindsym Mod4+Shift+Left move left
-bindsym Mod4+Shift+Down move d¨££$£own
+bindsym Mod4+Shift+Down move down
 bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 
@@ -243,7 +243,7 @@ client.background       #21222C
 
 exec --no-startup-id feh --bg-scale '/home/tatiana/Pictures/Wallpapers/w0.jpg'
 
-bindsym Mod4+Return exec kitty
+bindsym Mod4+Return exec gnome-terminal
 
 # bindsym Mod4+bracketright exec scrot -s -e "xclip -selection c -t image/png \$f && mv \$f ~/Pictures/screenshots"
 
