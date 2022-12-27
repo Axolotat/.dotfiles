@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Replace YOUR_API_KEY with your actual API key
-API_KEY=a292528eee69148660b20083f89ed7eb
 
 # Replace YOUR_CITY with the name of your city
 CITY=Paris
@@ -25,24 +24,27 @@ API_URL="https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&ap
 curl $API_URL > $WEATHER_FILE
 
 # Extract the weather description from the API response
-WEATHER=$(jq -r '.weather[0].description' $WEATHER_FILE)
+WEATHER=$(jq -r '.weather[0].main' $WEATHER_FILE)
 
 # Set the background image based on the weather conditions
-if [[ $WEATHER = *"clear"* ]]; then
+if [[ $WEATHER = *"Clear"* ]]; then
   # Set the background to a clear sky image
   cp $IMAGE_DIR/clear.jpg $BACKGROUND_FILE
-elif [[ $WEATHER = *"clouds"* ]]; then
+elif [[ $WEATHER = *"Clouds"* ]]; then
   # Set the background to a cloudy sky image
   cp $IMAGE_DIR/clouds.jpg $BACKGROUND_FILE
-elif [[ $WEATHER = *"broken clouds"* ]]; then
-    # Set the background to a cloudy sky image
-    cp $IMAGE_DIR/clouds.jpg $BACKGROUND_FILE
-elif [[ $WEATHER = *"rain"* ]]; then
+elif [[ $WEATHER = *"Rain"* ]]; then
   # Set the background to a rainy sky image
   cp $IMAGE_DIR/rain.jpeg $BACKGROUND_FILE
-elif [[ $WEATHER = *"snow"* ]]; then
+elif [[ $WEATHER = *"Snow"* ]]; then
+  # Set the background to a rainy sky image
+  cp $IMAGE_DIR/rain.jpeg $BACKGROUND_FILE
+elif [[ $WEATHER = *"Drizzle"* ]]; then
+  # Set the background to a rainy sky image
+  cp $IMAGE_DIR/drizzle.jpeg $BACKGROUND_FILE
+elif [[ $WEATHER = *"Thunderstorm"* ]]; then
   # Set the background to a snowy sky image
-  cp $IMAGE_DIR/snow.jpg $BACKGROUND_FILE
+  cp $IMAGE_DIR/thunderstorm.jpg $BACKGROUND_FILE
 else
   # Set the background to a default image
   cp $IMAGE_DIR/default.jpg $BACKGROUND_FILE
