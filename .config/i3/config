@@ -253,3 +253,5 @@ bindsym Mod4+F6 exec pavucontrol
  
  exec_always --no-startup-id xfce4-power-manager
 
+#Background weather
+ exec_always --no-startup-id sh $HOME/.config/backgroundWeather/change_background.sh
