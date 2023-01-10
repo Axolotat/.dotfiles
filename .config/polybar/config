@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = spotify filesystem alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -425,3 +425,14 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+[module/spotify]
+type = custom/script
+exec = /home/tatiana/.dotfiles/.config/polybar/spotify.sh
+tail = true
+click-left = spotify
+format = <label>
+format-padding = 1
+label = %output%
+escape-format = %s 
+
