@@ -3,7 +3,7 @@
 # Replace YOUR_API_KEY with your actual API key
 
 # Replace YOUR_CITY with the name of your city
-CITY=Paris
+CITY=Lausanne
 
 # Set the path to the directory where you want to store the images
 IMAGE_DIR=~/Pictures/Wallpapers/weather
@@ -51,4 +51,4 @@ else
 fi
 
 # Set the background image
-feh --bg-fill $BACKGROUND_FILE
+wal -i $BACKGROUND_FILE
