@@ -34,6 +34,7 @@ code-insiders flameshot lxappearance nautilus btop
 
 I use config-init from [flungo](https://github.com/flungo/i3-config.d)
 
-### background : 
-Use pywal for change the color sheme
-Use custom `./backgroundWeather/change_background.sh`, change the background according to weather (localisation is set to lausanne)
+### background :
+
+I use pywal to change the color; it's directly linked with my i3 config who use the script `change_background.sh`.
+It's change the background according to weather (localisation is set to lausanne) and apply a new colors with pywal. Have fun !
