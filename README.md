@@ -2,6 +2,10 @@
 
 ### I use this config with `manjaro i3`
 
+![Screen](./images/1.png)
+![Screen](./images/2.png)
+![Screen](./images/3.png)
+
 <br/>
 
 Add this folder to `~/`
